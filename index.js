@@ -1,18 +1,28 @@
 let hasBlackJack = false
 let isAlive = true
 let sumCard = 0
+let sumCardMOB = 0
 let cards = []
+let cardsMOB = []
+// let player1
+// let player2
 
 let cardEl = document.getElementById("sumCard")
+let cardMOBEl = document.getElementById("sumCardMOB")
 let messageEl = document.getElementById("message")
 let moreCardEl = document.getElementById("moreCard-btn")
+let endGameEl = document.getElementById("endGame-btn")
 let resetEl = document.getElementById("reset-btn")
 let cardsEl = document.getElementById("cards")
 
 function moreCard() {
     window.setTimeout(function() {
         let newCard = Math.floor( Math.random() * 13 )
+        let newCardMOB = Math.floor( Math.random() * 13 )
+
         cards.push(newCard)
+        cardsMOB.push(newCardMOB)
+
         sumCard += newCard
         cardsEl.textContent = cards
         cardEl.textContent = sumCard
@@ -59,6 +69,16 @@ function resetButton() {
     document.body.style.backgroundImage = "url('R.jpg')"
     cards.splice(0, cards.length)
     cardsEl.textContent = ""
+}
+
+function resultMatch() {
+    if (player1 < player2) {
+        return player1
+    } else if (player1 > player2) {
+        return player2
+    } else {
+        return player1
+    }
 }
 
 console.log(sumCard)
