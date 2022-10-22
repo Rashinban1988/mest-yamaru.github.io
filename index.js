@@ -4,63 +4,85 @@ let sumCard = 0
 let sumCardMOB = 0
 let cards = []
 let cardsMOB = []
-// let player1
-// let player2
+let mobStopFlg = false
+let playerStopFlg = false
 
 let cardEl = document.getElementById("sumCard")
 let cardMOBEl = document.getElementById("sumCardMOB")
 let messageEl = document.getElementById("message")
 let moreCardEl = document.getElementById("moreCard-btn")
+let emptyEl = document.getElementById("empty-btn")
 let endGameEl = document.getElementById("endGame-btn")
 let resetEl = document.getElementById("reset-btn")
 let cardsEl = document.getElementById("cards")
+let cardsMOBEl = document.getElementById("cardsMOB")
+let matchEl = document.getElementById("match")
 
 function moreCard() {
     window.setTimeout(function() {
-        let newCard = Math.floor( Math.random() * 13 )
-        let newCardMOB = Math.floor( Math.random() * 13 )
+        getRandomCard(cards)
+        sumCard = cards.reduce(function(sum, element) {
+            return sum + element
+        }, 0)
 
-        cards.push(newCard)
-        cardsMOB.push(newCardMOB)
+        if (!mobStopFlg) {
+            getRandomCard(cardsMOB)
+            sumCardMOB = cardsMOB.reduce(function(sum, element) {
+                return sum + element
+            }, 0)
+            if (sumCardMOB > 21) {
+                sumCardMOB -= cardsMOB.slice(-1)[0]
+                mobStopFlg = true
+            }
+        }
 
-        sumCard += newCard
         cardsEl.textContent = cards
         cardEl.textContent = sumCard
+        emptyEl.style.display = "inline"
+        endGameEl.style.display = "inline"
         questionCard()
-    }, 700)
+    }, 680)
 }
 
 function resetCard(){
     window.setTimeout(function() {
-        sumCard = 0
-        cardEl.textContent = sumCard
-        messageEl.textContent = "START GAME?"
         resetButton()
     }, 500)
 }
 
 function questionCard() {
+    let player1 = sumCard
+    let player2 = sumCardMOB
     if (sumCard < 21) {
         messageEl.textContent = "One More Card?"
         moreCardEl.textContent = "Draw"
     } else if (sumCard === 21) {
-        messageEl.textContent = "You're BlackJack!! You Winn!!"
         hasBlackJack = true
+        playerStopFlg = true
+        messageEl.textContent = "You're BlackJack!! You Win!!"
         resetEl.style.display = "inline"
+        emptyEl.style.display = "none"
+        endGameEl.style.display = "none"
         moreCardEl.style.display = "none"
         document.body.style.backgroundImage = "url('Regao.jpg')"
-        hasBlackJack = true
+        cardsMOBEl.textContent = player2
     } else {
         messageEl.textContent = "Game Over"
         resetEl.style.display = "inline"
+        emptyEl.style.display = "none"
+        endGameEl.style.display = "none"
         moreCardEl.style.display = "none"
         messageEl.style.color = "red"
         document.body.style.backgroundImage = "url('Rend.jpg')"
         isAlive = false
+        cardsMOBEl.textContent = player2
     }
 }
 
 function resetButton() {
+    sumCard = 0
+    sumCardMOB = 0
+    cardEl.textContent = sumCard
     moreCardEl.style.display = "inline"
     resetEl.style.display = "none"
     messageEl.textContent = "Want to play a round?"
@@ -68,19 +90,43 @@ function resetButton() {
     moreCardEl.textContent = "Start Game"
     document.body.style.backgroundImage = "url('R.jpg')"
     cards.splice(0, cards.length)
+    cardsMOB.splice(0, cardsMOB.length)
     cardsEl.textContent = ""
+    cardsMOBEl.textContent = "?"
+    mobStopFlg = false
+    playerStopFlg = false
 }
 
 function resultMatch() {
-    if (player1 < player2) {
-        return player1
-    } else if (player1 > player2) {
-        return player2
-    } else {
-        return player1
-    }
+    window.setTimeout(function() {
+        let player1 = sumCard
+        let player2 = sumCardMOB
+        playerStopFlg = true
+        if (player1 > player2) {
+            messageEl.textContent = "You Win!"
+            document.body.style.backgroundImage = "url('Regao.jpg')"
+        } else if (player1 < player2) {
+            messageEl.textContent = "You lose!"
+            document.body.style.backgroundImage = "url('Rend.jpg')"
+        } else {
+            messageEl.textContent = "Draw..."
+            document.body.style.backgroundImage = "url('R.jpg')"
+        }
+        resetEl.style.display = "inline"
+        emptyEl.style.display = "none"
+        endGameEl.style.display = "none"
+        moreCardEl.style.display = "none"
+        cardsMOBEl.textContent = player2
+    }, 680)
 }
 
-console.log(sumCard)
-console.log(hasBlackJack)
-console.log(isAlive)
+function getRandomCard(yourCard) {
+    let randomNumber = Math.floor( Math.random()*13 ) + 1
+    if (randomNumber > 10) {
+        yourCard.push(10)
+    } else if (randomNumber === 1) {
+        yourCard.push(11)
+    } else {
+        yourCard.push(randomNumber)
+    }
+}
