@@ -1,91 +1,197 @@
 html {
-    font-size: 50px;
-    text-shadow: 1px 2px 3px #808080
+    font-size: 100%;
 }
 
 body {
+}
+
+header {
+    width: 100%;
+    aspect-ratio: 15 / 1;
+}
+
+.header-top {
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
     display: flex;
-    flex-wrap:  wrap;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0.3rem 2rem;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-text-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin-left: 2rem;
+}
+
+.logo{
+    width: 8rem;
+}
+
+.header-text {
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.header-btn {
+    border-radius: 0.5rem;
+    height: clamp(0.1rem, 3vw + 0.1rem, 3rem);
+    width: 100%;
+    margin-right: 0.1rem;
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 1rem);
+}
+
+.main-img-box {
+    display: flex;
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    aspect-ratio: 48 / 20;
+}
+
+.main-img {
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    text-align: center;
+    background-position: center center;
+    color: white;
+}
+
+.main-text {
+    text-shadow: 0.1rem 0.2rem 0.3rem #808080;
+    font-size: clamp(0.1rem, 3vw + 0.1rem, 3rem);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+}
+
+.main-text2 {
+    text-shadow: 0.1rem 0.2rem 0.3rem #808080;
+    font-size: clamp(0.1rem, 3vw + 0.1rem, 3rem);
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.notice {
+    display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    aspect-ratio: 5 / 2;
+}
+
+.notice-box {
+    width: 70%;
+    position: relative;
+}
+
+.notice-title {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
+}
+
+.detail-btn {
+    border-radius: 2rem;
+    padding: 0rem 2rem;
+}
+
+.notice-btn {
+    position: absolute;
+    top: 5%;
+    right: 0%;
+}
+
+.notice-list {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid;
+}
+
+.notice-date {
+    width: 30%;
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
+}
+
+.notice-text {
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
+}
+
+.introduce {
+    width: 100%;
+    aspect-ratio: 5 / 2;
+    display: flex;
+    text-align: flex-start;
+    justify-content: center;
+}
+
+.intro-box {
+    display:flex;
+    text-align: center;
+    align-items: center;
+    width: 85%;
+    height: 70%;
+}
+
+.intro-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     color: white;
 }
 
-.title {
-    font-size: 3rem;
-    margin: none;
-    align-self: flex-start;
+.intro-main {
+    height: 100%;
+    position: relative;
+    margin: auto;
+    aspect-ratio: 1.5 / 1 ;
+}
+
+.intro-title {
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 3rem);
+    font: bold;
+}
+
+.intro-sub-title {
+    font-size: clamp(0.1rem, 1.5vw + 0.1rem, 2rem);
+    font: bold;
+}
+
+.intro-text {
+    font-size: clamp(0.1rem, 1.4vw + 0.1rem, 1.7rem);
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.intro-btn {
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
+}
+
+.reason {
     width: 100%;
-    height: 50%;
-    color: black;
-    opacity: 0.6;
-}
-
-.title-text {
-    background-color: white;
-}
-
-#message {
-    font-size: 1.3rem;
-    align-self: flex-start;
-    width: 100%;
-    height: 5%;
-}
-
-#card {
-    width: 100%;
-    height: 15%;
-    font-size: 4rem;
-}
-
-.cards-text {
-    font-size: 1.5rem;
-    width: 100%;
-    height: 5%;
-}
-
-.cards-text-mob {
-    font-size: 1.5rem;
-    width: 100%;
-    height: 5%;
-}
-
-.btn-area {
-    width: 100%;
-    height: 10%;
-}
-
-button {
-    border: none;
-    border-radius: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    width: 45%;
-}
-
-#empty-btn {
-    background: rgba(29, 38, 160, 0);
-    width: 10%;
-}
-
-#moreCard-btn {
-    background: rgba(48, 255, 48, 0.425);
-}
-
-#endGame-btn {
-    background: rgb(29, 38, 160);
-    width: 10%;
-}
-
-#reset-btn {
-    background: rgba(255, 0, 0, 0.425);
+    aspect-ratio: 5 / 2;
 }

@@ -1,29 +1,100 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body style="background-image:url('R.jpg');">
-        <div class="title">
-            <div class="title-text">Black Jack</div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>TrainingHtml</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <p class="mb-0">広島県福屋氏の整骨院｜腰痛のお悩み・脱毛なら沖野上鍼灸整骨院へ</p>
+            <p class="mb-0">〒720-0825 広島県福⼭市沖野上町5丁⽬29−27</p>
         </div>
-        <div id="message">
-            <div class="message-text">Want to play a round?</div>
+        <div class="header-area my-0">
+            <h1 class="logo-area">
+                <a href="">
+                    <img src="/images/yuru-logo.png" alt="ゆるふわり" class="logo">
+                </a>
+            </h1>
+            <ul class="header-text-area">
+                <li class="header-text">TOP</li>
+                <li class="header-text">当院について</li>
+                <li class="header-text">メニュー⼀覧</li>
+                <li class="header-text">お客様の声</li>
+                <li class="header-text">よくあるご質問</li>
+                <a href="" class="header-text"><button type="button" class="btn-white detail-btn">084-919-0663</button></a>
+                <a href="" class="header-text"><button type="button" class="btn-white detail-btn">お問い合わせ</button></a>
+            </ul>
         </div>
-        <div id="card">
-            <div id="sumCard">0</div>
+    </header>
+
+    <body>
+
+        <div class="main-img-box">
+            <div class="main-img w-50" style="background-image:url('/images/yuru-main1.jpg');"></div>
+            <div class="main-img w-50" style="background-image:url('/images/yuru-main2.jpg');"></div>
+            <p class="main-text">無理なく『健康』と『美』を⼿に⼊れる</p>
+            <p class="main-text2">不調改善から美容脱⽑までトータルでボディケアできる整⾻院</p>
         </div>
-        <div class="cards-text">
-            <span>Your Cards: </span><span id="cards"></span>
+
+        <div class="notice">
+            <div class="notice-box">
+                <p class="notice-title">新着情報</p>
+                <a href="" class="notice-btn"><button class="detail-btn">詳しく見る</button></a>
+                <ul class="notice-list">
+                    <li class="notice-date">yyyy/mm/dd</li>
+                    <li class="notice-text">美容エステ始めました</li>
+                </ul>
+                <ul class="notice-list">
+                    <li class="notice-date">yyyy/mm/dd</li>
+                    <li class="notice-text">新着情報のタイトルが⼊りますニュースのタイトルが⼊ります</li>
+                </ul>
+                <ul class="notice-list">
+                    <li class="notice-date">yyyy/mm/dd</li>
+                    <li class="notice-text">新着情報のタイトルが⼊りますニュースのタイトルが⼊ります</li>
+                </ul>
+            </div>
         </div>
-        <div class="cards-text-mob" style="display:inline;">
-            <span>Enemy Cards: </span><span id="cardsMOB">?</span>
+
+        <div class="introduce">
+            <div class="intro-box">
+                <img class="intro-img" src="/images/yuru-intro1.jpg" alt="整体">
+                <div class="intro-main">
+                    <p class="intro-title">コンセプト</p>
+                    <p class="intro-sub-title">どんな症状でお悩みですか？</p>
+                    <p class="intro-text">沖野上鍼灸整⾻院では、悩みを持つ⽅の気持ちに寄り添い、より良い⽣活を送れるようお⼿
+                        伝いさせていただきます。<br>
+                        痛みの症状は⼈それぞれ！お客様⼀⼈⼀⼈に合わせた施術を提供しています。<br>
+                        患者様に合わせた治療を選択し、お悩みの根本からの改善を⽬指します。<br>
+                        今までいろいろ試してきたけれどお悩みが改善しなかったという⽅も、ぜひ諦めずにご相談
+                        ください。<br>
+                    </p>
+                    <a href="" class="intro-btn"><button class="detail-btn">詳しく見る</button></a>
+                </div>
+            </div>
         </div>
-        <div class="btn-area">
-            <button id="empty-btn" style="display:none;"></button>
-            <button id="moreCard-btn" onclick="moreCard()" style="display:inline;">Start Game</button>
-            <button id="endGame-btn" onclick="resultMatch()" style="display:none;">〆</button>
-            <button id="reset-btn" class="btn btn-flat" onclick="resetCard()" style="display:none">New Game</button>
+
+        <div class="reason bg-primary">
+            <p></p>
+            <div class="reason-main">
+                <div>
+                    <p></p>
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+            </div>
         </div>
-        <script src="index.js"></script>
+
     </body>
+
+    <footer>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
 </html>
