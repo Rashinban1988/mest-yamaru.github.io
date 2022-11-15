@@ -26,9 +26,9 @@ header {
 
 .header-text-area {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-right: 1rem;
+    height: 100%;
 }
 
 .logo-area {
@@ -38,8 +38,12 @@ header {
     margin-left: 2rem;
 }
 
-.logo{
+.logo {
     width: 8rem;
+}
+
+.sp-op-menu {
+    display: flex;
 }
 
 .header-text {
