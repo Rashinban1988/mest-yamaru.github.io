@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.jaticker_1.0.0.js"></script>
+    <link rel="stylesheet" href="jquery.jaticker_1.0.0.css" type="text/css">
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <title>TrainingHtml</title>
 </head>
 <body>
@@ -18,7 +22,7 @@
         <div class="header-area my-0">
             <h1 class="logo-area">
                 <a href="">
-                    <img src="/images/yuru-logo.png" alt="ゆるふわり" class="logo">
+                    <img src="images/yuru-logo.png" alt="ゆるふわり" class="logo">
                 </a>
             </h1>
             <ul class="header-text-area">
@@ -34,12 +38,14 @@
     </header>
 
     <body>
-
         <div class="main-img-box">
-            <div class="main-img w-50" style="background-image:url('/images/yuru-main1.jpg');"></div>
-            <div class="main-img w-50" style="background-image:url('/images/yuru-main2.jpg');"></div>
-            <p class="main-text">無理なく『健康』と『美』を⼿に⼊れる</p>
-            <p class="main-text2">不調改善から美容脱⽑までトータルでボディケアできる整⾻院</p>
+            <div class="main-img w-50" style="background-image:url('images/yuru-main1.jpg');"></div>
+            <div class="main-img w-50" style="background-image:url('images/yuru-main2.jpg');"></div>
+            <div id="main-cover" class="main-img-cover" style="display:block;"></div>
+            <div id="jaticker-1" class="">
+                <span class="main-text "><ruby>無理なく<rt>むりなく</rt></ruby><ruby>『健康』と<rt>『けんこうと』</rt></ruby><ruby>『美』を<rt>『び』を</rt></ruby><ruby>⼿に⼊れる<rt>てにいれる</rt></ruby></span>
+                <span class="main-text2"><ruby>不調改善から<rt>ふちょうかいぜんから</rt></ruby><ruby>美容脱⽑まで<rt>びようだつもうまで</rt></ruby>トータルでボディケアできる<ruby>整⾻院<rt>せいこついん</rt></ruby></span>
+            </div>
         </div>
 
         <div class="notice">
@@ -63,7 +69,7 @@
 
         <div class="introduce">
             <div class="intro-box">
-                <img class="intro-img" src="/images/yuru-intro1.jpg" alt="整体">
+                <img class="intro-img" src="images/yuru-intro1.jpg" alt="整体">
                 <div class="intro-main">
                     <p class="intro-title">コンセプト</p>
                     <p class="intro-sub-title">どんな症状でお悩みですか？</p>
@@ -94,7 +100,6 @@
 
     <footer>
     </footer>
-
     <script src="index.js"></script>
 </body>
 </html>

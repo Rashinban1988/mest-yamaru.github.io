@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    font-family: "Sawarabi Gothic";
 }
 
 header {
@@ -56,12 +57,21 @@ header {
 }
 
 .main-img-box {
+    position: relative;
     display: flex;
     position: relative;
     text-align: center;
     color: white;
     width: 100%;
     aspect-ratio: 48 / 20;
+    font-family: "M PLUS Rounded 1c";
+}
+
+.main-img-cover {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 48 / 20;
+    background-color: #ffffff;
 }
 
 .main-img {
@@ -79,7 +89,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-
+    color: white;
 }
 
 .main-text2 {
@@ -90,6 +100,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    color: white;
 }
 
 .notice {
