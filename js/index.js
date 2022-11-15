@@ -4,8 +4,8 @@ $(function(){
 
     $('#jaticker-1').jaticker({'autoStart': false});
     setInterval(function(){
-        $('#main-cover').fadeOut( 13000 );
-        $('#jaticker-1').jatickerStart({'inputSpeed': 45,}
+        $('#main-cover').fadeOut( 10000 );
+        $('#jaticker-1').jatickerStart({'inputSpeed': 100,}
         );
     });
 

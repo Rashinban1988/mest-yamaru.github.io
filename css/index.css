@@ -85,18 +85,7 @@ header {
     text-shadow: 0.1rem 0.2rem 0.3rem #808080;
     font-size: clamp(0.1rem, 3vw + 0.1rem, 3rem);
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    color: white;
-}
-
-.main-text2 {
-    text-shadow: 0.1rem 0.2rem 0.3rem #808080;
-    font-size: clamp(0.1rem, 3vw + 0.1rem, 3rem);
-    position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
