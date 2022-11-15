@@ -12,6 +12,7 @@ header {
 }
 
 .header-top {
+    aspect-ratio: 45 / 1;
     font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
     display: flex;
     flex-wrap: wrap;
@@ -20,8 +21,21 @@ header {
 }
 
 .header-area {
+    aspect-ratio: 20 / 1;
     display: flex;
     justify-content: space-between;
+}
+
+#wrapper {
+    display: flex;
+}
+
+#wrapper nav ul li{
+display:inline-block;
+}
+
+#wrapper nav ul li a{
+color: rgb(0, 0, 0)
 }
 
 .header-text-area {
@@ -46,7 +60,7 @@ header {
     display: flex;
 }
 
-.header-text {
+.menu-text {
     font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
     list-style: none;
     margin-left: 2rem;
@@ -198,4 +212,115 @@ header {
 .reason {
     width: 100%;
     aspect-ratio: 5 / 2;
+}
+
+@media screen and (max-width: 600px) {
+    #wrapper nav ul li a {
+        color: rgb(255 255 255);
+    }
+
+    #wrapper nav {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 61.8%;
+        height: 40%;
+        background:rgb(51, 51, 51);
+        font-size: 16px;
+        z-index: 2
+    }
+
+
+    #wrapper .btn-gnavi {
+        position: fixed;
+        top: 50px;
+        right: 20px;
+        width: 30px;
+        height: 24px;
+        z-index: 3;
+        box-sizing: border-box;
+        cursor: pointer;
+        -webkit-transition: all 750ms;
+        transition: all 750ms
+    }
+
+    #wrapper .btn-gnavi span {
+        position: absolute;
+        width: 30px;
+        height: 4px;
+        background: #666;
+        border-radius: 10px;
+        -webkit-transition: all 750ms;
+        transition: all 750ms
+    }
+
+    #wrapper .btn-gnavi span:nth-child(1) {
+        top: 0
+    }
+
+    #wrapper .btn-gnavi span:nth-child(2) {
+        top: 10px
+    }
+
+    #wrapper .btn-gnavi span:nth-child(3) {
+        top: 20px
+    }
+
+    #wrapper .btn-gnavi.open {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+
+    #wrapper .btn-gnavi.open span {
+        background: #fff
+    }
+
+    #wrapper .btn-gnavi.open span {
+        width: 24px;
+    }
+    #wrapper .contents section p {
+        position: absolute;
+        top: 50%;
+        width: 30%;
+        line-height: 1.4;
+        font-size: 20px;
+        color: #fff;
+        text-shadow: 0 0 6px rgba(102, 102, 102, 0.482)
+    }
+
+    #wrapper .contents section:nth-child(odd) p {
+        left: 10%
+    }
+
+    #wrapper .contents section:nth-child(even) p {
+        right: 10%
+    }
+
+    .header-text-area {
+    align-items: start;
+    margin: 0;
+    }
+
+    #wrapper nav ul li {
+        display: list-item;
+        list-style-type: none;
+        text-transform: uppercase;
+        padding: 0.5em;
+    }
+
+    .header-area {
+        aspect-ratio: 8 / 1;
+    }
+
+    .menu-text {
+        padding: 0;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .menu {
+        padding: 0;
+        margin: auto;
+    }
+
 }
