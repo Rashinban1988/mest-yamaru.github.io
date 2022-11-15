@@ -3,7 +3,8 @@ let mainCoverEl = document.getElementById("main-cover")
 $('#jaticker-1').jaticker({'autoStart': false});
 setInterval(function(){
     $('#main-cover').fadeOut( 13000 );
-    $('#jaticker-1').jatickerStart();
+    $('#jaticker-1').jatickerStart({'inputSpeed': 45,}
+    );
 });
 
 // $('#jaticker-1').jaticker({
