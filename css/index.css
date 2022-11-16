@@ -6,9 +6,20 @@ body {
     font-family: "Sawarabi Gothic";
 }
 
-header {
+.header-hide-box {
     width: 100%;
     aspect-ratio: 15 / 1;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 15 / 1;
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
 }
 
 .header-top {
@@ -116,6 +127,8 @@ color: rgb(0, 0, 0)
     align-items: center;
     width: 100%;
     aspect-ratio: 5 / 2;
+    overflow-y: auto;
+    scroll-snap-type: y;
 }
 
 .notice-box {
@@ -132,12 +145,16 @@ color: rgb(0, 0, 0)
 .detail-btn {
     border-radius: 2rem;
     padding: 0rem 2rem;
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
 }
 
 .notice-btn {
     position: absolute;
     top: 5%;
     right: 0%;
+    border-radius: 2rem;
+    padding: 0rem 2rem;
+    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
 }
 
 .notice-list {
@@ -224,7 +241,7 @@ color: rgb(0, 0, 0)
         top: 0;
         right: -300px;
         width: 61.8%;
-        height: 40%;
+        height: 100%;
         background:rgb(51, 51, 51);
         font-size: 16px;
         z-index: 2
@@ -308,6 +325,10 @@ color: rgb(0, 0, 0)
         padding: 0.5em;
     }
 
+    .header-hide-box {
+        height: 6rem;
+    }
+
     .header-area {
         aspect-ratio: 8 / 1;
     }
@@ -320,7 +341,33 @@ color: rgb(0, 0, 0)
 
     .menu {
         padding: 0;
-        margin: auto;
+        margin: 43px auto;
     }
 
+    .notice {
+        overflow-y: auto;
+        scroll-snap-type: y;
+    }
+
+    .notice-box {
+        width: 61.8%;
+        height :100%;
+    }
+
+    .notice-title {
+        margin: 0.5rem 0 0.2rem 0;
+        font-size: 1rem;
+    }
+
+    .notice-list {
+        display: block;
+        margin-bottom: 0.3rem;
+        scroll-snap-align: center;
+    }
+
+    .notice-btn {
+        top: 6%;
+        right: 0%;
+        padding: 0rem 0.5rem;
+    }
 }
