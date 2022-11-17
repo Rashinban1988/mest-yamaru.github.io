@@ -1,13 +1,5 @@
 $(function(){
 
-    // // Topページのみ遅れてヘッダー出現
-    // if($('body').hasClass('home blog')) {
-    //     // Topページだったらヘッダーアニメーション
-    //     topTextAnimation('.hrn-animation',1000,3800);
-    // } else { // 違ったらそのまま表示
-    //     $('.hrn-animation').css('opacity',1);
-    // }
-
     let mainCoverEl = document.getElementById("main-cover")
 
     $('#jaticker-1').jaticker({'autoStart': false});
