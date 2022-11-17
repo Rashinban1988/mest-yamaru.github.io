@@ -8,7 +8,9 @@ body {
 
 .header-hide-box {
     width: 100%;
-    aspect-ratio: 15 / 1;
+    aspect-ratio: 14 / 1;
+    background-color: rgb(0, 0, 0);
+    padding: auto;
 }
 
 header {
@@ -17,7 +19,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    aspect-ratio: 15 / 1;
+    aspect-ratio: 14 / 1;
     background: rgb(255, 255, 255);
     box-sizing: border-box;
 }
@@ -129,14 +131,19 @@ color: rgb(0, 0, 0)
     aspect-ratio: 5 / 2;
     overflow-y: auto;
     scroll-snap-type: y;
-}
-
-.notice-box {
-    width: 70%;
     position: relative;
 }
 
+.notice-box {
+    width: 61.8%;
+    height: 61.8%;
+    margin-top: 2.5rem;
+}
+
 .notice-title {
+    position: absolute;
+    top: 10%;
+    right: 50%;
     display: flex;
     justify-content: center;
     font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
@@ -150,8 +157,8 @@ color: rgb(0, 0, 0)
 
 .notice-btn {
     position: absolute;
-    top: 5%;
-    right: 0%;
+    top: 10%;
+    right: 10%;
     border-radius: 2rem;
     padding: 0rem 2rem;
     font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
@@ -325,8 +332,13 @@ color: rgb(0, 0, 0)
         padding: 0.5em;
     }
 
+    header {
+        aspect-ratio: 5 / 1;
+    }
+
     .header-hide-box {
-        height: 6rem;
+        width: 100%;
+        aspect-ratio: 5 / 1;
     }
 
     .header-area {
@@ -344,19 +356,16 @@ color: rgb(0, 0, 0)
         margin: 43px auto;
     }
 
-    .notice {
+    .notice-box {
         overflow-y: auto;
         scroll-snap-type: y;
-    }
-
-    .notice-box {
-        width: 61.8%;
-        height :100%;
     }
 
     .notice-title {
         margin: 0.5rem 0 0.2rem 0;
         font-size: 1rem;
+        top: 10%;
+        right: 42.5%;
     }
 
     .notice-list {
@@ -366,8 +375,22 @@ color: rgb(0, 0, 0)
     }
 
     .notice-btn {
-        top: 6%;
-        right: 0%;
+        font-size: 0.6rem;
+        top: 14%;
+        right: 20%;
         padding: 0rem 0.5rem;
+    }
+
+    .main-img-box {
+        aspect-ratio: 100 / 80;
+    }
+
+    .main-img-cover {
+        aspect-ratio: 100 / 80;
+    }
+
+    .notice {
+        aspect-ratio: 100 / 80;
+        font-size: 
     }
 }
