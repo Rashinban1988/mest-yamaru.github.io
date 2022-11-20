@@ -1,82 +1,89 @@
 html {
-    font-size: 100%;
+    font-size: 12px;
 }
 
 body {
     font-family: "Sawarabi Gothic";
 }
 
-.header-hide-box {
-    width: 100%;
-    aspect-ratio: 14 / 1;
-    background-color: rgb(0, 0, 0);
-    padding: auto;
-}
 
+/* ヘッダーはじまり
+-------------------------------------- */
 header {
+    /* background-color: #fffbec; */
+    display: table;
+    padding: 50px 0;
     position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
     width: 100%;
-    aspect-ratio: 14 / 1;
-    background: rgb(255, 255, 255);
-    box-sizing: border-box;
-}
-
-.header-top {
-    aspect-ratio: 45 / 1;
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0.3rem 2rem;
-}
-
-.header-area {
-    aspect-ratio: 20 / 1;
-    display: flex;
-    justify-content: space-between;
+    z-index: 3;
+    top: 0;
 }
 
 #wrapper {
-    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* グラデ
+-------------------------------------- */
+#wrapper .bigger{
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.14) 50%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(0,0,0,0.14)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.14) 50%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.14) 50%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.14) 50%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.14) 50%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+header .logo {
+    display: table-cell;
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 0 0 0 50px;
+    cursor: pointer;
+}
+
+header .logo h1 img.big-logo {
+    display: block;
+    width: 125px;
+}
+
+.inner {
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #wrapper nav ul li{
 display:inline-block;
 }
 
-#wrapper nav ul li a{
-color: rgb(0, 0, 0)
+#wrapper nav ul li a {
+    color: rgb(255 255 255);
 }
 
-.header-text-area {
-    display: flex;
-    align-items: center;
-    margin-right: 1rem;
-    height: 100%;
+#main-menu {
+    text-align: right;
+    font-size: 0;
+    line-height: 1;
+    margin: 0 50px 0 0;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    width: 20%;
-    margin-left: 2rem;
+#main-menu>li {
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+    padding: 2px 0;
 }
 
-.logo {
-    width: 8rem;
-}
-
-.sp-op-menu {
-    display: flex;
-}
-
-.menu-text {
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
-    list-style: none;
-    margin-left: 2rem;
+#main-menu>li>a {
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    color: #fff;
 }
 
 .header-btn {
@@ -86,7 +93,12 @@ color: rgb(0, 0, 0)
     margin-right: 0.1rem;
     font-size: clamp(0.1rem, 1vw + 0.1rem, 1rem);
 }
+/* -----------------------------------
+ヘッダーおわり */
 
+
+/* メイン画像はじまり
+-------------------------------------- */
 .main-img-box {
     position: relative;
     display: flex;
@@ -94,14 +106,14 @@ color: rgb(0, 0, 0)
     text-align: center;
     color: white;
     width: 100%;
-    aspect-ratio: 48 / 20;
+    aspect-ratio: 42 / 20;
     font-family: "M PLUS Rounded 1c";
 }
 
 .main-img-cover {
     position: absolute;
     width: 100%;
-    aspect-ratio: 48 / 20;
+    aspect-ratio: 42 / 20;
     background-color: #ffffff;
 }
 
@@ -118,11 +130,16 @@ color: rgb(0, 0, 0)
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -35%);
     width: 100%;
     color: white;
 }
+/* -----------------------------------
+メイン画像おわり */
 
+
+/* お知らせはじまり
+-------------------------------------- */
 .notice {
     display: flex;
     justify-content: center;
@@ -251,7 +268,8 @@ color: rgb(0, 0, 0)
         height: 100%;
         background:rgb(51, 51, 51);
         font-size: 16px;
-        z-index: 2
+        z-index: 2;
+
     }
 
 
@@ -265,7 +283,7 @@ color: rgb(0, 0, 0)
         box-sizing: border-box;
         cursor: pointer;
         -webkit-transition: all 750ms;
-        transition: all 750ms
+        transition: all 750ms;
     }
 
     #wrapper .btn-gnavi span {
@@ -275,32 +293,32 @@ color: rgb(0, 0, 0)
         background: #666;
         border-radius: 10px;
         -webkit-transition: all 750ms;
-        transition: all 750ms
+        transition: all 750ms;
     }
 
     #wrapper .btn-gnavi span:nth-child(1) {
-        top: 0
+        top: 0;
     }
 
     #wrapper .btn-gnavi span:nth-child(2) {
-        top: 10px
+        top: 10px;
     }
 
     #wrapper .btn-gnavi span:nth-child(3) {
-        top: 20px
+        top: 20px;
     }
 
     #wrapper .btn-gnavi.open {
         -webkit-transform: rotate(180deg);
-        transform: rotate(180deg)
+        transform: rotate(180deg);
     }
 
     #wrapper .btn-gnavi.open span {
-        background: #fff
+        background: #fff;
     }
 
     #wrapper .btn-gnavi.open span {
-        width: 24px;
+        width: 24px;;
     }
     #wrapper .contents section p {
         position: absolute;
@@ -309,15 +327,15 @@ color: rgb(0, 0, 0)
         line-height: 1.4;
         font-size: 20px;
         color: #fff;
-        text-shadow: 0 0 6px rgba(102, 102, 102, 0.482)
+        text-shadow: 0 0 6px rgba(102, 102, 102, 0.482);
     }
 
     #wrapper .contents section:nth-child(odd) p {
-        left: 10%
+        left: 10%;
     }
 
     #wrapper .contents section:nth-child(even) p {
-        right: 10%
+        right: 10%;
     }
 
     .header-text-area {
@@ -391,6 +409,5 @@ color: rgb(0, 0, 0)
 
     .notice {
         aspect-ratio: 100 / 80;
-        font-size: 
     }
 }
