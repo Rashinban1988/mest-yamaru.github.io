@@ -17,6 +17,7 @@ $(function(){
         if (window.performance.navigation.type === 1) {
             mainCoverEl.style.display = "block";
             headerEl.style.display = "none";
+            headerEl.style.backgroundColor = 'transparent';
         }
     }
 
@@ -73,9 +74,9 @@ $(function(){
 
             // mainTextの頭部分が発火位置を超えたら
             if (mainTextTop < triggerBottom) {
-                headerEl.style.display = "none";
+                headerEl.style.backgroundColor = 'white';
             } else {
-                headerEl.style.display = "block";
+                headerEl.style.backgroundColor = 'transparent';
             }
         });
         }
