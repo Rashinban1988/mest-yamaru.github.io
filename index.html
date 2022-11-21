@@ -7,6 +7,7 @@
     <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="js/jquery.jaticker_1.0.0.js"></script>
     <link rel="stylesheet" href="css/jquery.jaticker_1.0.0.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
@@ -14,10 +15,11 @@
 </head>
 <body>
     <div id="wrapper" style="display: block;">
-        <header class="bigger">
+
+        <header id="head" class="bigger" style="display:none;">
             <a href="" class="logo">
                 <h1 href="">
-                    <img src="images/yuru-logo.png" alt="ゆるふわり" class="big-logo">
+                    <img src="images/yuru-logo3.png" alt="ゆるふわり" class="big-logo">
                 </h1>
             </a>
             <div class="inner relative">
@@ -46,19 +48,21 @@
                 </div>
             </div>
 
-            <dl class="info container besic_sectionset">
-                <dt class="wow fadeInDown animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
-                  <h2>お知らせ</h2>
-                </dt>
-                <dd>
-                  <ul>
-                    <li class="incho wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>院長ブログ</h3><a href="https://hidamari.asia/archives/2502/" title="令和元年　ごあいさつ"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_02.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2019/05/59393554_2218716201560337_4356665781107294208_n-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">院長ブログ</span><span class="date">2019.05.02</span>令和元年　ごあいさつ</p></a></li>
-                    <li class="staff wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>スタッフブログ</h3><a href="https://hidamari.asia/archives/2336/" title="リラクゼーションメニュー始まります！"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_01.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2017/09/cdae8d8fb48329907d481fd6b8c2dcce-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">スタッフブログ</span><span class="date">2017.09.22</span>リラクゼーションメニュー始まります！</p></a></li>
-                    <li class="nukudama wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>ぬくだまLIFE</h3><a href="https://hidamari.asia/archives/1735/" title="【お取り扱い店舗】大阪・モモの家　"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_02.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2015/10/head-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">ぬくだまLIFE</span><span class="date">2015.10.02</span>【お取り扱い店舗】大阪・モモの家　</p></a></li>
-                    <li class="event wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>イベント</h3><a href="https://hidamari.asia/archives/2395/" title="【イベント☆おすすめセッション】"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_01.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2018/03/img_2358-1-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">イベント</span><span class="date">2018.03.09</span>【イベント☆おすすめセッション】</p></a></li>
-                  </ul>
-                </dd>
-              </dl>
+            <article id="contents">
+                <dl class="info container basic-section-set">
+                    <dt class="wow fadeInDown animated" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+                    <h2>お知らせ</h2>
+                    </dt>
+                    <dd>
+                    <ul>
+                        <li class="incho wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>院長ブログ</h3><a href="https://hidamari.asia/archives/2502/" title="令和元年　ごあいさつ"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_02.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2019/05/59393554_2218716201560337_4356665781107294208_n-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">院長ブログ</span><span class="date">2019.05.02</span>令和元年　ごあいさつ</p></a></li>
+                        <li class="staff wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>スタッフブログ</h3><a href="https://hidamari.asia/archives/2336/" title="リラクゼーションメニュー始まります！"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_01.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2017/09/cdae8d8fb48329907d481fd6b8c2dcce-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">スタッフブログ</span><span class="date">2017.09.22</span>リラクゼーションメニュー始まります！</p></a></li>
+                        <li class="nukudama wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>ぬくだまLIFE</h3><a href="https://hidamari.asia/archives/1735/" title="【お取り扱い店舗】大阪・モモの家　"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_02.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2015/10/head-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">ぬくだまLIFE</span><span class="date">2015.10.02</span>【お取り扱い店舗】大阪・モモの家　</p></a></li>
+                        <li class="event wow fadeInDown animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInDown;"><h3>イベント</h3><a href="https://hidamari.asia/archives/2395/" title="【イベント☆おすすめセッション】"><div><img src="//hidamari.asia/wp/wp-content/themes/hidamarido/images/common/thumbframe_01.png" class="topimg"><img width="150" height="150" src="https://hidamari.asia/wp/wp-content/uploads/2018/03/img_2358-1-150x150.jpg" class="attachment-150x150 size-150x150 wp-post-image" alt=""></div><p><span class="category">イベント</span><span class="date">2018.03.09</span>【イベント☆おすすめセッション】</p></a></li>
+                    </ul>
+                    </dd>
+                </dl>
+            </article>
 
             <div class="notice">
                 <p class="notice-title">新着情報</p>
