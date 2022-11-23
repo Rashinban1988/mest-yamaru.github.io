@@ -1,7 +1,7 @@
 $(function(){
 
-    let mainCoverEl = document.getElementById("main-cover");
-    let headerEl = document.getElementById("head");
+    const mainCoverEl = document.getElementById("main-cover");
+    const headerEl = document.getElementById("head");
 
     $('#jaticker-1').jaticker({'autoStart': false, 'onFinished': function(){
         $('#main-cover').fadeOut( 2000 );
@@ -20,6 +20,32 @@ $(function(){
             headerEl.style.backgroundColor = 'transparent';
         }
     }
+
+    window.addEventListener("load", () => {
+        // main-textをすべて取得
+        const mainText = document.querySelectorAll((".main-text"));
+        // scrollイベントをセット
+        window.addEventListener("scroll", showMainText);
+        // ロードのタイミングで一度発火
+        showMainText();
+
+        function showMainText() {
+          // 発火位置
+          const triggerBottom = (window.innerHeight / 20) * 4;
+
+        mainText.forEach((mainText) => {
+            // mainTextの頭部分のTopからの座標を取得
+            const mainTextTop = mainText.getBoundingClientRect().top;
+
+            // mainTextの頭部分が発火位置を超えたら
+            if (mainTextTop < triggerBottom) {
+                headerEl.style.backgroundColor = 'white';
+            } else {
+                headerEl.style.backgroundColor = 'transparent';
+            }
+        });
+        }
+    });
 
     /*============================
     |    ハンバーガーメニュー    |
@@ -55,31 +81,4 @@ $(function(){
     //     $('.sp-op-msk').removeClass('op-msk');
     //     $('.sp-op-menu').removeClass('op-menu');
     // });
-
-    window.addEventListener("load", () => {
-        // main-textをすべて取得
-        const mainText = document.querySelectorAll(".main-text");
-        // scrollイベントをセット
-        window.addEventListener("scroll", showMainText);
-        // ロードのタイミングで一度発火
-        showMainText();
-
-        function showMainText() {
-          // 発火位置
-          const triggerBottom = (window.innerHeight / 5) * 4;
-
-        mainText.forEach((mainText) => {
-            // mainTextの頭部分の座標を取得
-            const mainTextTop = mainText.getBoundingClientRect().top;
-
-            // mainTextの頭部分が発火位置を超えたら
-            if (mainTextTop < triggerBottom) {
-                headerEl.style.backgroundColor = 'white';
-            } else {
-                headerEl.style.backgroundColor = 'transparent';
-            }
-        });
-        }
-    });
-
 });
