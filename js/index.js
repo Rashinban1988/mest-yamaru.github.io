@@ -39,7 +39,9 @@ $(function(){
 
             // mainTextの頭部分が発火位置を超えたら
             if (mainTextTop < triggerBottom) {
-                headerEl.style.backgroundColor = 'white';
+                headerEl.animate({backgroundColor:'white'}, 2300, function() {
+                    headerEl.style.backgroundColor = 'white';
+                });
             } else {
                 headerEl.style.backgroundColor = 'transparent';
             }
