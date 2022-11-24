@@ -160,91 +160,6 @@ display:inline-block;
     display: table;
 }
 
-/* お知らせはじまり
--------------------------------------- */
-.basic-section-set > dt {
-    vertical-align: middle;
-    width: 35px;
-    padding-right: 35px;
-    position: absolute;
-    color: rgb(123 64 64);
-}
-
-.info dd ul li:first-child {
-    margin-left: 0;
-}
-
-.info dd ul li {
-    float: left;
-    margin-left: 4%;
-    width: 22%;
-    color: rgb(123 64 64);
-}
-
-.animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-
-.info dd ul li h3 {
-    font-size: 140%;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.info dd ul li a {
-    display: block;
-}
-
-.info dd ul li div {
-    height: auto;
-    margin: 0 auto;
-    position: relative;
-    width: 150px;
-    height: 150px;
-    background: url(../images/common/no_thumb.gif) no-repeat 50% 50%;
-    background-size: contain;
-}
-
-.info dd ul li div img.topimg {
-    z-index: 2;
-}
-
-.info dd ul li div img {
-    width: 150px;
-    position: absolute;
-    z-index: 1;
-}
-
-.info dd ul li p {
-    padding: 10px 5px 0;
-    font-size: 90%;
-    color: rgb(123 64 64);
-}
-
-.info dd ul li p span.category {
-    display: none;
-}
-
-.info dd ul li p span {
-    text-align: center;
-    display: block;
-    padding: 0 0 5px;
-}
-
-.date {
-    color: #d2b37f;
-    font-weight: 600;
-    font-size: 90%;
-}
-
-
-
-
-
-
 
 .notice {
     display: flex;
@@ -254,22 +169,22 @@ display:inline-block;
     aspect-ratio: 5 / 2;
     overflow-y: auto;
     scroll-snap-type: y;
-    position: relative;
 }
 
 .notice-box {
     width: 61.8%;
     height: 61.8%;
     margin-top: 2.5rem;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .notice-title {
-    position: absolute;
-    top: 10%;
-    right: 50%;
     display: flex;
     justify-content: center;
     font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
+    position: relative;
 }
 
 .detail-btn {
@@ -280,7 +195,7 @@ display:inline-block;
 
 .notice-btn {
     position: absolute;
-    top: 10%;
+    top: 0%;
     right: 10%;
     border-radius: 2rem;
     padding: 0rem 2rem;
@@ -332,22 +247,25 @@ display:inline-block;
     position: relative;
     margin: auto;
     aspect-ratio: 1.5 / 1 ;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .intro-title {
     margin-top: 0.8rem;
     margin-bottom: 0;
-    font-size: clamp(0.1rem, 2vw + 0.1rem, 3rem);
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 5rem);
     font: bold;
 }
 
 .intro-sub-title {
-    font-size: clamp(0.1rem, 1.5vw + 0.1rem, 2rem);
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 4rem);
     font: bold;
 }
 
 .intro-text {
-    font-size: clamp(0.1rem, 1.4vw + 0.1rem, 1.7rem);
+    font-size: clamp(0.1rem, 3vw + 0.1rem, 2.5rem);
     text-align: left;
     margin-bottom: 0;
 }
