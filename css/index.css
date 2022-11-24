@@ -184,23 +184,23 @@ display:inline-block;
 .notice-title {
     display: flex;
     justify-content: center;
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 2rem);
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 4rem);
     position: relative;
 }
 
 .detail-btn {
     border-radius: 2rem;
     padding: 0rem 2rem;
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 2rem);
 }
 
 .notice-btn {
     position: absolute;
-    top: 0%;
+    top: 20%;
     right: 10%;
     border-radius: 2rem;
     padding: 0rem 2rem;
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 2rem);
 }
 
 .notice-list {
@@ -211,11 +211,11 @@ display:inline-block;
 
 .notice-date {
     width: 30%;
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 2rem);
 }
 
 .notice-text {
-    font-size: clamp(0.1rem, 1vw + 0.1rem, 1.5rem);
+    font-size: clamp(0.1rem, 2vw + 0.1rem, 2rem);
 }
 
 .introduce {
