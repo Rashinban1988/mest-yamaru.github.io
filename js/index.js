@@ -17,6 +17,9 @@ $(function(){
         if (window.performance.navigation.type === 1) {
             mainCoverEl.style.display = "block";
             headerEl.style.display = "none";
+            headerEl.animate({backgroundColor:'transparent'}, 3000, transEvent());
+        }
+        function transEvent() {
             headerEl.style.backgroundColor = 'transparent';
         }
     }
@@ -39,13 +42,17 @@ $(function(){
 
             // mainTextの頭部分が発火位置を超えたら
             if (mainTextTop < triggerBottom) {
-                headerEl.animate({backgroundColor:'white'}, 2300, function() {
-                    headerEl.style.backgroundColor = 'white';
-                });
+                headerEl.animate({backgroundColor:'white'}, 3000, whiteEvent());
             } else {
-                headerEl.style.backgroundColor = 'transparent';
+                headerEl.animate({backgroundColor:'transparent'}, 3000, transEvent());
             }
         });
+        function whiteEvent() {
+            headerEl.style.backgroundColor = 'white';
+        }
+        function transEvent() {
+            headerEl.style.backgroundColor = 'transparent';
+        }
         }
     });
 
